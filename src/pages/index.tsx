@@ -57,8 +57,10 @@ function IndexPage({ data }: Props) {
           logoTitle={content.name}
           title={content.hero.title}
           tagline={content.hero.tagline}
-          ctaTitle={content.hero.cta_title}
-          ctaLink={content.hero.cta_link}
+          mainCtaTitle={content.hero.main_cta_title}
+          mainCtaLink={content.hero.main_cta_link}
+          secondaryCtaTitle={content.hero.secondary_cta_title}
+          secondaryCtaLink={content.hero.secondary_cta_link}
           frontImage={data.heroFrontFile.childImageSharp.gatsbyImageData}
         />
         <GeneralInfoSection

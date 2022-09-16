@@ -1,13 +1,15 @@
 import styled from '@emotion/styled'
-import { IGatsbyImageData, StaticImage } from 'gatsby-plugin-image'
+import { Link as GatsbyLink } from 'gatsby'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import React from 'react'
 
 import {
+  ContainedButton,
   H1,
   NavBar,
   SectionContainer,
   SectionContentWrapper,
-  SectionCtaButton,
+  SectionCtaButtonsWrapper,
   SectionTextWrapper,
   Tagline,
 } from '../../shared'
@@ -47,6 +49,20 @@ const ProjectLogoText = styled.span`
   text-transform: uppercase;
 `
 
+const ByTaiyakiLogoText = styled(GatsbyLink)`
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-top: ${({ theme }) => theme.spacing(0.25)};
+  color: ${({ theme }) => theme.colors.common.white};
+
+  ${({ theme }) => theme.breakpoints.up('sm')} {
+    margin-left: ${({ theme }) => theme.spacing(2)};
+  }
+`
+
 const InnerContentWrapper = styled.div`
   display: flex;
   flex-direction: column-reverse;
@@ -81,12 +97,20 @@ const TextWrapper = styled(SectionTextWrapper)`
   }
 `
 
+const CtaButtonsWrapper = styled(SectionCtaButtonsWrapper)`
+  ${({ theme }) => theme.breakpoints.up('md')} {
+    grid-auto-flow: row;
+  }
+`
+
 interface Props {
   logoTitle: string
   title: string
   tagline: string
-  ctaTitle: string
-  ctaLink: string
+  mainCtaTitle: string
+  mainCtaLink: string
+  secondaryCtaTitle: string
+  secondaryCtaLink: string
   frontImage: IGatsbyImageData
 }
 
@@ -94,8 +118,10 @@ export function HeroSection({
   logoTitle,
   title,
   tagline,
-  ctaTitle,
-  ctaLink,
+  mainCtaTitle,
+  mainCtaLink,
+  secondaryCtaTitle,
+  secondaryCtaLink,
   frontImage,
 }: Props) {
   return (
@@ -106,6 +132,7 @@ export function HeroSection({
           logoOverride={
             <LogoContainer>
               <ProjectLogoText>{logoTitle}</ProjectLogoText>
+              <ByTaiyakiLogoText to="/">by Taiyaki Studios</ByTaiyakiLogoText>
             </LogoContainer>
           }
         />
@@ -113,21 +140,28 @@ export function HeroSection({
           <TextWrapper>
             <H1 as="h1">{title}</H1>
             <Tagline>{tagline}</Tagline>
-            <SectionCtaButton
-              href={ctaLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              isLight
-            >
-              {ctaTitle}
-            </SectionCtaButton>
+            <CtaButtonsWrapper>
+              <ContainedButton
+                href={mainCtaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                isLight
+              >
+                {mainCtaTitle}
+              </ContainedButton>
+              <ContainedButton
+                href={secondaryCtaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                isOutline
+                isLight
+              >
+                {secondaryCtaTitle}
+              </ContainedButton>
+            </CtaButtonsWrapper>
           </TextWrapper>
           <FrontImageContainer>
-            <StaticImage
-              src="../../../images/hero-front.png"
-              width={480}
-              alt="Hero front image"
-            />
+            <GatsbyImage image={frontImage} alt="Hero front image" />
           </FrontImageContainer>
         </InnerContentWrapper>
       </ContentWrapper>
