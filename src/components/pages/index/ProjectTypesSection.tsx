@@ -1,12 +1,13 @@
 import styled from '@emotion/styled'
 import React from 'react'
 
+import OtherLogo from '../../../images/project-type-logos/other-logo.svg'
+import SnapchatLensLogo from '../../../images/project-type-logos/snapchat-lens-logo.svg'
 import UnrealEngineLogo from '../../../images/project-type-logos/unreal-engine-logo.svg'
 import VrmLogo from '../../../images/project-type-logos/vrm-logo.svg'
-import SnapchatLensLogo from '../../../images/project-type-logos/snapchat-lens-logo.svg'
-import OtherLogo from '../../../images/project-type-logos/other-logo.svg'
 
 import {
+  ContainedGatsbyButton,
   H2,
   SectionContainer,
   SectionContentWrapper,
@@ -92,12 +93,16 @@ const GridItemBody = styled.p`
   }
 `
 
-function getLogoForProjectType(id: string) {
+const GridItemButton = styled(ContainedGatsbyButton)`
+  margin-top: ${({ theme }) => theme.spacing(2)};
+`
+
+function getLogoForProjectType(slug: string) {
   // TODO(adrian): Extract string cases to an enum
-  switch (id) {
-    case 'unreal_engine':
+  switch (slug) {
+    case 'unreal-engine':
       return <UnrealEngineLogo />
-    case 'snapchat_lens':
+    case 'snapchat-lens':
       return <SnapchatLensLogo />
     case 'vrm':
       return <VrmLogo />
@@ -110,7 +115,7 @@ interface Props {
   title: string
   tagline: string
   items: {
-    id: string
+    slug: string
     title: string
     body: string
   }[]
@@ -118,14 +123,15 @@ interface Props {
 
 export function ProjectTypesSection({ title, tagline, items }: Props) {
   function renderGridItems() {
-    console.log(items)
-
     return items.map((item, index) => (
       <GridItem key={index}>
-        <GridItemIconContainer>{getLogoForProjectType(item.id)}</GridItemIconContainer>
+        <GridItemIconContainer>{getLogoForProjectType(item.slug)}</GridItemIconContainer>
         <GridItemTextContainer>
           <GridItemTitle>{item.title}</GridItemTitle>
           <GridItemBody>{item.body}</GridItemBody>
+          <GridItemButton to={`/${item.slug}`} islight="true">
+            Learn more
+          </GridItemButton>
         </GridItemTextContainer>
       </GridItem>
     ))
