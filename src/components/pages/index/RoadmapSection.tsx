@@ -23,6 +23,11 @@ const RoadmapItemsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: ${({ theme }) => theme.spacing(5)};
+
+  ${({ theme }) => theme.breakpoints.up('md')} {
+    flex-direction: row;
+    margin-top: ${({ theme }) => theme.spacing(7)};
+  }
 `
 
 interface Props {
