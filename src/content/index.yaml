@@ -67,6 +67,23 @@ project_types:
       body: |
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod mattis auctor accumsan adipiscing. Aenean convallis.
 
+roadmap:
+  title: Roadmap
+  items:
+    - timeframe: 01/10/2022
+      title: Project Launch
+      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
+      is_highlight: True
+    - timeframe: 01/10/2022
+      title: Snapchat Lens
+      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
+    - timeframe: 01/10/2022
+      title: VRM Tookit
+      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
+    - timeframe: 01/10/2022
+      title: NFT Pre-Order
+      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
+
 discord:
   title: Join our Discord Community
   tagline: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit proin id blandit luctus molestie.
