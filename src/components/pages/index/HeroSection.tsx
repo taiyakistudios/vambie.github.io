@@ -16,6 +16,10 @@ import {
 const StyledContainer = styled(SectionContainer)`
   position: relative;
   background-color: #171717;
+
+  ${({ theme }) => theme.breakpoints.up('md')} {
+    min-height: 90vh;
+  }
 `
 
 const ContentWrapper = styled(SectionContentWrapper)`
@@ -76,6 +80,7 @@ const InnerContentWrapper = styled.div`
 
   ${({ theme }) => theme.breakpoints.up('md')} {
     flex-direction: row;
+    padding-top: ${({ theme }) => theme.spacing(5)};
   }
 `
 
@@ -85,7 +90,7 @@ const FrontImageContainer = styled.div`
   align-self: center;
 
   ${({ theme }) => theme.breakpoints.up('md')} {
-    margin-left: ${({ theme }) => theme.spacing(1)};
+    margin-left: ${({ theme }) => theme.spacing(5)};
   }
 `
 
@@ -94,7 +99,7 @@ const TextWrapper = styled(SectionTextWrapper)`
   margin-bottom: auto;
 
   ${({ theme }) => theme.breakpoints.up('md')} {
-    width: 720px;
+    flex: 1;
   }
 `
 

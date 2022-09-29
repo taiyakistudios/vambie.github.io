@@ -2,13 +2,7 @@ import { graphql, HeadFC } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import React from 'react'
 
-import {
-  DiscordSection,
-  GeneralInfoSection,
-  HeroSection,
-  ProjectTypesSection,
-  StoryboardSection,
-} from '../components/pages/index'
+import { HeroSection, StoryboardSection } from '../components/pages/index'
 import { DefaultHead, Footer, Layout } from '../components/shared'
 import content from '../content/index.yaml'
 
@@ -63,14 +57,14 @@ function IndexPage({ data }: Props) {
           secondaryCtaLink={content.hero.secondary_cta_link}
           frontImage={data.heroFrontFile.childImageSharp.gatsbyImageData}
         />
-        <GeneralInfoSection
+        {/* <GeneralInfoSection
           title={content.general_info.title}
           tagline={content.general_info.tagline}
           mosaicBgImage={data.mosaicBgFile.childImageSharp.gatsbyImageData}
           blocks={content.general_info.blocks}
-        />
+        /> */}
         <StoryboardSection title={content.storyboard.title} items={storyboardItems} />
-        <ProjectTypesSection
+        {/* <ProjectTypesSection
           title={content.project_types.title}
           tagline={content.project_types.tagline}
           items={content.project_types.items}
@@ -81,7 +75,7 @@ function IndexPage({ data }: Props) {
           ctaTitle={content.discord.cta_title}
           ctaLink={content.discord.cta_link}
           frontImage={data.discordFrontFile.childImageSharp.gatsbyImageData}
-        />
+        /> */}
       </main>
       <Footer isLight={false} />
     </Layout>
@@ -92,9 +86,10 @@ export default IndexPage
 
 export const Head: HeadFC<Props['data']> = function ({ data }) {
   const name = content.name
+  const heroTitle = content.hero.title
 
   return (
-    <DefaultHead title={`Taiyaki Studios - ${name}`} description={content.description} />
+    <DefaultHead title={`${name} - ${heroTitle}`} description={content.description} />
   )
 }
 

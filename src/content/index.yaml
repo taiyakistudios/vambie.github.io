@@ -1,6 +1,6 @@
 slug: vambie
 name: Vambie
-description: Bringing vampires to life sounded like a bad idea but we did it anyway
+description: Join our community of creators and bring Vambies to life to show you are worthy of your own, unique Vambie.
 
 hero:
   title: Join the Vambie Preseason
@@ -9,7 +9,7 @@ hero:
 
     - Dan, Creator, Vambies
   main_cta_title: Get your free Vambie on Discord
-  main_cta_link: https://google.com
+  main_cta_link: https://discord.gg/2mfZA69nAj
   secondary_cta_title: Don’t have Discord? Click here
   secondary_cta_link: https://google.com
 
@@ -90,4 +90,4 @@ discord:
   title: Join our Discord Community
   tagline: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit proin id blandit luctus molestie.
   cta_title: Join the Taiyaki Discord
-  cta_link: https://taiyakistudios.com
+  cta_link: https://discord.gg/2mfZA69nAj

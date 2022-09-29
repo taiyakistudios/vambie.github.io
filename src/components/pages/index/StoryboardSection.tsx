@@ -10,7 +10,7 @@ import {
 } from '../../shared'
 
 const MainContainer = styled(SectionContainer)`
-  background-color: #171717;
+  background-color: #1f1f1f;
   color: ${({ theme }) => theme.colors.common.white};
 `
 
