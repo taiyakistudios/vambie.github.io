@@ -7,7 +7,6 @@ import {
   GeneralInfoSection,
   HeroSection,
   ProjectTypesSection,
-  RoadmapSection,
   StoryboardSection,
 } from '../components/pages/index'
 import { DefaultHead, Footer, Layout } from '../components/shared'
@@ -76,7 +75,6 @@ function IndexPage({ data }: Props) {
           tagline={content.project_types.tagline}
           items={content.project_types.items}
         />
-        <RoadmapSection title={content.roadmap.title} items={content.roadmap.items} />
         <DiscordSection
           title={content.discord.title}
           tagline={content.discord.tagline}

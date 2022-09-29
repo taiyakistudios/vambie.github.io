@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { Link as GatsbyLink } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 import React from 'react'
 
@@ -49,19 +48,21 @@ const ProjectLogoText = styled.span`
   text-transform: uppercase;
 `
 
-const ByTaiyakiLogoText = styled(GatsbyLink)`
-  text-decoration: none;
-  font-size: 0.7rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  opacity: 0.5;
-  margin-top: ${({ theme }) => theme.spacing(0.25)};
-  color: ${({ theme }) => theme.colors.common.white};
+// NOTE(adrian): Removed for Vambie launch
+//
+// const ByTaiyakiLogoText = styled(GatsbyLink)`
+//   text-decoration: none;
+//   font-size: 0.7rem;
+//   font-weight: 300;
+//   text-transform: uppercase;
+//   opacity: 0.5;
+//   margin-top: ${({ theme }) => theme.spacing(0.25)};
+//   color: ${({ theme }) => theme.colors.common.white};
 
-  ${({ theme }) => theme.breakpoints.up('sm')} {
-    margin-left: ${({ theme }) => theme.spacing(2)};
-  }
-`
+//   ${({ theme }) => theme.breakpoints.up('sm')} {
+//     margin-left: ${({ theme }) => theme.spacing(2)};
+//   }
+// `
 
 const InnerContentWrapper = styled.div`
   display: flex;
@@ -132,7 +133,10 @@ export function HeroSection({
           logoOverride={
             <LogoContainer>
               <ProjectLogoText>{logoTitle}</ProjectLogoText>
-              <ByTaiyakiLogoText to="/">by Taiyaki Studios</ByTaiyakiLogoText>
+              {/* 
+                NOTE(adrian): Removed for Vambie launch 
+                <ByTaiyakiLogoText to="/">by Taiyaki Studios</ByTaiyakiLogoText>
+              */}
             </LogoContainer>
           }
         />

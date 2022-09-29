@@ -7,7 +7,6 @@ import UnrealEngineLogo from '../../../images/project-type-logos/unreal-engine-l
 import VrmLogo from '../../../images/project-type-logos/vrm-logo.svg'
 
 import {
-  ContainedGatsbyButton,
   H2,
   SectionContainer,
   SectionContentWrapper,
@@ -93,9 +92,10 @@ const GridItemBody = styled.p`
   }
 `
 
-const GridItemButton = styled(ContainedGatsbyButton)`
-  margin-top: ${({ theme }) => theme.spacing(2)};
-`
+// NOTE(adrian): Unused until dedicated project type pages are ready
+// const GridItemButton = styled(ContainedGatsbyButton)`
+//   margin-top: ${({ theme }) => theme.spacing(2)};
+// `
 
 function getLogoForProjectType(slug: string) {
   // TODO(adrian): Extract string cases to an enum
@@ -129,9 +129,12 @@ export function ProjectTypesSection({ title, tagline, items }: Props) {
         <GridItemTextContainer>
           <GridItemTitle>{item.title}</GridItemTitle>
           <GridItemBody>{item.body}</GridItemBody>
-          <GridItemButton to={`/${item.slug}`} islight="true">
-            Learn more
-          </GridItemButton>
+          {/* 
+            NOTE(adrian): Comment out for now since dedicated project types are not ready yet.
+            <GridItemButton to={`/${item.slug}`} islight="true">
+              Learn more
+            </GridItemButton>  
+          */}
         </GridItemTextContainer>
       </GridItem>
     ))
