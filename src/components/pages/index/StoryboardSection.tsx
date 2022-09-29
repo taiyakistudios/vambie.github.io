@@ -43,7 +43,8 @@ const GridImageItem = styled.div`
   display: block;
   position: relative;
   background-color: rgba(255, 255, 255, 0.05);
-  height: 200px;
+  min-height: 200px;
+  height: 100%;
   overflow: hidden;
 `
 

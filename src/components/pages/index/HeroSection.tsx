@@ -125,6 +125,20 @@ export function HeroSection({
   secondaryCtaLink,
   frontImage,
 }: Props) {
+  const formattedTagline = tagline
+    .replace(/\n/, '<br/>')
+    .split('<br/>')
+    .flatMap((text) => {
+      if (text.match(/\n/)) {
+        return text.split(/\n/).map((string, index) => {
+          if (string === '') return <br key={index} />
+          return string
+        })
+      } else {
+        return [text]
+      }
+    })
+
   return (
     <StyledContainer>
       <ContentWrapper>
@@ -143,7 +157,7 @@ export function HeroSection({
         <InnerContentWrapper>
           <TextWrapper>
             <H1 as="h1">{title}</H1>
-            <Tagline>{tagline}</Tagline>
+            <Tagline>{formattedTagline}</Tagline>
             <CtaButtonsWrapper>
               <ContainedButton
                 href={mainCtaLink}

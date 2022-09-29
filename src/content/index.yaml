@@ -3,12 +3,14 @@ name: Vambie
 description: Bringing vampires to life sounded like a bad idea but we did it anyway
 
 hero:
-  title: Bringing vampires to life sounded like a bad idea but we did it anyway
+  title: Join the Vambie Preseason
   tagline: |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit proin id blandit luctus molestie.
-  main_cta_title: Bring your own Vambie to life
+    "Behold… I have finally released the first Vambies into this world! Join our community of creators and bring Vambies to life in Snapchat, Animaze, VTubeStudio, Unreal Engine, or VRChat to show you are worthy of your own, unique Vambie." 
+
+    - Dan, Creator, Vambies
+  main_cta_title: Get your free Vambie on Discord
   main_cta_link: https://google.com
-  secondary_cta_title: Get via email
+  secondary_cta_title: Don’t have Discord? Click here
   secondary_cta_link: https://google.com
 
 general_info:
@@ -30,20 +32,20 @@ general_info:
         fans generating content with your IP.
 
 storyboard:
-  title: This story had to start somewhere
+  title: Roadmap
   items:
     - imageFileName: sb-image-1
-    - title: Varius eu elit aliquam tempus.
+    - title: 10/03/2022 - Vambie Preseason
       body: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac ipsum auctor vitae arcu, eu. Adipiscing vitae turpis aenean.
-    - title: Tincidunt libero sit est sem.
+        A limited series of Vambies are available for free.
+    - title: 12/15/2022 - Vambie Launch
       body: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla convallis amet nisi, dictumst nulla et. Eget dapibus neque.
+        Thousands of Vambies are unleashed. Top preseason creators will get a free unique Vambie.
     - imageFileName: sb-image-2
     - imageFileName: sb-image-3
-    - title: Imperdiet vitae est pulvinar ac.
+    - title: 02/15/2023 - Governance Launch
       body: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod mattis auctor accumsan adipiscing. Aenean convallis.
+        Top creators will be able to vote on the commercial direction of the Vambie project and earn financial rewards for creating popular content.
 
 project_types:
   title: Get assets and start creating
