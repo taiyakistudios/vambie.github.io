@@ -18,18 +18,15 @@ general_info:
   tagline: |
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem imperdiet pretium nisl, bibendum a at consectetur volutpat pretium.
   blocks:
-    - title: Multi-Format Support
+    - title: Launch on social media
       body: |
-        Our avatar collections export to FBX w/ Unreal support, VRM, VRChat, Snap Lenses, and 
-        more allowing creators to use a variety of tools to create avatar content real time.
-    - title: No Technical Experience Required
+        Launch a Tiktok, Youtube, Twitch, or Instagram page featuring Vambie content to earn your own, free, unique Vambie.
+    - title: Join the community
       body: |
-        Use your face and body to control virtual characters without any prior 3D, animation, or motion 
-        capture experience.
-    - title: Generative Avatar Collections
+        Join our creator community and grow the Vambie brand together.
+    - title: Start monetizing
       body: |
-        We can get thousands of avatars in the hands of your fans and help manage your own community of 
-        fans generating content with your IP.
+        Monetize your content royalty-free.
 
 storyboard:
   title: Roadmap

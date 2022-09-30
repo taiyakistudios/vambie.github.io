@@ -2,7 +2,11 @@ import { graphql, HeadFC } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import React from 'react'
 
-import { HeroSection, StoryboardSection } from '../components/pages/index'
+import {
+  HeroSection,
+  StoryboardSection,
+  GeneralInfoSection,
+} from '../components/pages/index'
 import { DefaultHead, Footer, Layout } from '../components/shared'
 import content from '../content/index.yaml'
 
@@ -57,12 +61,12 @@ function IndexPage({ data }: Props) {
           secondaryCtaLink={content.hero.secondary_cta_link}
           frontImage={data.heroFrontFile.childImageSharp.gatsbyImageData}
         />
-        {/* <GeneralInfoSection
+        <GeneralInfoSection
           title={content.general_info.title}
           tagline={content.general_info.tagline}
           mosaicBgImage={data.mosaicBgFile.childImageSharp.gatsbyImageData}
           blocks={content.general_info.blocks}
-        /> */}
+        />
         <StoryboardSection title={content.storyboard.title} items={storyboardItems} />
         {/* <ProjectTypesSection
           title={content.project_types.title}
