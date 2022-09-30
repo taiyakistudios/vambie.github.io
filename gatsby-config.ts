@@ -48,7 +48,8 @@ const config: GatsbyConfig = {
     title: 'Vambie',
     siteDomain: 'vambie.com',
     siteUrl: 'https://vambie.com',
-    description: 'TODO(adrian): Enter description here',
+    description:
+      'Vambies are for storytellers and content creators. Join my community and bring a Vambie to life with your story.',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin

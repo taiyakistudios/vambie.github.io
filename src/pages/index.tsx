@@ -59,6 +59,7 @@ function IndexPage({ data }: Props) {
           mainCtaLink={content.hero.main_cta_link}
           secondaryCtaTitle={content.hero.secondary_cta_title}
           secondaryCtaLink={content.hero.secondary_cta_link}
+          caption={content.hero.caption}
           frontImage={data.heroFrontFile.childImageSharp.gatsbyImageData}
         />
         <GeneralInfoSection
@@ -68,7 +69,8 @@ function IndexPage({ data }: Props) {
           blocks={content.general_info.blocks}
         />
         <StoryboardSection title={content.storyboard.title} items={storyboardItems} />
-        {/* <ProjectTypesSection
+        {/* NOTE(adrian): These sections can be re-added once copy is ready
+        <ProjectTypesSection
           title={content.project_types.title}
           tagline={content.project_types.tagline}
           items={content.project_types.items}
@@ -79,7 +81,8 @@ function IndexPage({ data }: Props) {
           ctaTitle={content.discord.cta_title}
           ctaLink={content.discord.cta_link}
           frontImage={data.discordFrontFile.childImageSharp.gatsbyImageData}
-        /> */}
+        /> 
+        */}
       </main>
       <Footer isLight={false} />
     </Layout>
@@ -88,12 +91,9 @@ function IndexPage({ data }: Props) {
 
 export default IndexPage
 
-export const Head: HeadFC<Props['data']> = function ({ data }) {
-  const name = content.name
-  const heroTitle = content.hero.title
-
+export const Head: HeadFC<Props['data']> = function () {
   return (
-    <DefaultHead title={`${name} - ${heroTitle}`} description={content.description} />
+    <DefaultHead title="Vambie - Join the Preaseason" description={content.description} />
   )
 }
 

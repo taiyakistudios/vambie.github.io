@@ -103,6 +103,31 @@ const TextWrapper = styled(SectionTextWrapper)`
   }
 `
 
+const Overline = styled.span`
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: ${({ theme }) => theme.spacing(1)};
+  opacity: 0.8;
+`
+
+const SecondaryLink = styled.a`
+  margin-top: ${({ theme }) => theme.spacing(1)};
+  color: ${({ theme }) => theme.colors.common.white};
+
+  &:hover {
+    opacity: 0.6;
+  }
+`
+
+const Caption = styled.p`
+  margin-top: ${({ theme }) => theme.spacing(5)};
+  display: block;
+  color: ${({ theme }) => theme.colors.common.white};
+  font-size: 0.875;
+  opacity: 0.8;
+  line-height: 1.5;
+`
+
 const CtaButtonsWrapper = styled(SectionCtaButtonsWrapper)`
   ${({ theme }) => theme.breakpoints.up('md')} {
     grid-auto-flow: row;
@@ -117,6 +142,7 @@ interface Props {
   mainCtaLink: string
   secondaryCtaTitle: string
   secondaryCtaLink: string
+  caption: string
   frontImage: IGatsbyImageData
 }
 
@@ -128,6 +154,7 @@ export function HeroSection({
   mainCtaLink,
   secondaryCtaTitle,
   secondaryCtaLink,
+  caption,
   frontImage,
 }: Props) {
   const formattedTagline = tagline
@@ -161,6 +188,7 @@ export function HeroSection({
         />
         <InnerContentWrapper>
           <TextWrapper>
+            <Overline>(Read this in a scary voice...)</Overline>
             <H1 as="h1">{title}</H1>
             <Tagline>{formattedTagline}</Tagline>
             <CtaButtonsWrapper>
@@ -172,16 +200,15 @@ export function HeroSection({
               >
                 {mainCtaTitle}
               </ContainedButton>
-              <ContainedButton
+              <SecondaryLink
                 href={secondaryCtaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                isOutline
-                isLight
               >
                 {secondaryCtaTitle}
-              </ContainedButton>
+              </SecondaryLink>
             </CtaButtonsWrapper>
+            <Caption>{caption}</Caption>
           </TextWrapper>
           <FrontImageContainer>
             <GatsbyImage image={frontImage} alt="Hero front image" />
