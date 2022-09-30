@@ -1,68 +1,90 @@
 slug: vambie
 name: Vambie
-description: Bringing vampires to life sounded like a bad idea but we did it anyway
+description: Join our community of creators and bring Vambies to life to show you are worthy of your own, unique Vambie.
 
 hero:
-  title: Bringing vampires to life sounded like a bad idea but we did it anyway
+  title: Join the Vambie Preseason
   tagline: |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit proin id blandit luctus molestie.
-  cta_title: Bring your own Vambie to life
-  cta_link: https://google.com
+    "Behold… I have finally released the first Vambies into this world! Join our community of creators and bring Vambies to life in Snapchat, Animaze, VTubeStudio, Unreal Engine, or VRChat to show you are worthy of your own, unique Vambie." 
+
+    - Dan, Creator, Vambies
+  main_cta_title: Get your free Vambie on Discord
+  main_cta_link: https://discord.gg/2mfZA69nAj
+  secondary_cta_title: Don’t have Discord?
+  secondary_cta_link: https://google.com
 
 general_info:
   title: More than 7500 vambies waiting to be brought to live and start their journey
   tagline: |
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem imperdiet pretium nisl, bibendum a at consectetur volutpat pretium.
   blocks:
-    - title: Multi-Format Support
+    - title: Launch on social media
       body: |
-        Our avatar collections export to FBX w/ Unreal support, VRM, VRChat, Snap Lenses, and 
-        more allowing creators to use a variety of tools to create avatar content real time.
-    - title: No Technical Experience Required
+        Launch a Tiktok, Youtube, Twitch, or Instagram page featuring Vambie content to earn your own, free, unique Vambie.
+    - title: Join the community
       body: |
-        Use your face and body to control virtual characters without any prior 3D, animation, or motion 
-        capture experience.
-    - title: Generative Avatar Collections
+        Join our creator community and grow the Vambie brand together.
+    - title: Start monetizing
       body: |
-        We can get thousands of avatars in the hands of your fans and help manage your own community of 
-        fans generating content with your IP.
+        Monetize your content royalty-free.
 
 storyboard:
-  title: This story had to start somewhere
+  title: Roadmap
   items:
     - imageFileName: sb-image-1
-    - title: Varius eu elit aliquam tempus.
+    - title: 10/03/2022 - Vambie Preseason
       body: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac ipsum auctor vitae arcu, eu. Adipiscing vitae turpis aenean.
-    - title: Tincidunt libero sit est sem.
+        A limited series of Vambies are available for free.
+    - title: 12/15/2022 - Vambie Launch
       body: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla convallis amet nisi, dictumst nulla et. Eget dapibus neque.
+        Thousands of Vambies are unleashed. Top preseason creators will get a free unique Vambie.
     - imageFileName: sb-image-2
     - imageFileName: sb-image-3
-    - title: Imperdiet vitae est pulvinar ac.
+    - title: 02/15/2023 - Governance Launch
       body: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod mattis auctor accumsan adipiscing. Aenean convallis.
+        Top creators will be able to vote on the commercial direction of the Vambie project and earn financial rewards for creating popular content.
 
 project_types:
   title: Get assets and start creating
   tagline: |
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit proin id blandit luctus molestie.
   items:
-    - title: Snapchat Lens
+    - slug: snapchat-lens
+      title: Snapchat Lens
       body: |
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod mattis auctor accumsan adipiscing. Aenean convallis.
-    - title: Unreal Engine
+    - slug: unreal-engine
+      title: Unreal Engine
       body: |
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod mattis auctor accumsan adipiscing. Aenean convallis.
-    - title: VRM
+    - slug: vrm
+      title: VRM
       body: |
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod mattis auctor accumsan adipiscing. Aenean convallis.
-    - title: Other
+    - slug: other
+      title: Other
       body: |
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod mattis auctor accumsan adipiscing. Aenean convallis.
+
+roadmap:
+  title: Roadmap
+  items:
+    - timeframe: 01/10/2022
+      title: Project Launch
+      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
+      is_highlight: True
+    - timeframe: 01/10/2022
+      title: Snapchat Lens
+      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
+    - timeframe: 01/10/2022
+      title: VRM Tookit
+      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
+    - timeframe: 01/10/2022
+      title: NFT Pre-Order
+      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
 
 discord:
   title: Join our Discord Community
   tagline: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit proin id blandit luctus molestie.
   cta_title: Join the Taiyaki Discord
-  cta_link: https://taiyakistudios.com
+  cta_link: https://discord.gg/2mfZA69nAj

@@ -1,14 +1,10 @@
 import styled from '@emotion/styled'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 import React from 'react'
 
-import {
-  H2,
-  SectionContainer,
-  SectionContentWrapper,
-  SectionTextWrapper,
-  Tagline,
-} from '../../shared'
+import { SectionContainer, SectionContentWrapper } from '../../shared'
+
+/* Temporarily comment out for Vambie launch
 
 const MainContainer = styled(SectionContainer)`
   background-color: #212121;
@@ -35,6 +31,7 @@ const MainImageOverlay = styled.div`
     rgba(0, 0, 0, 0.3)
   );
 `
+*/
 
 const BottomContainer = styled(SectionContainer)`
   background-color: #2b2b2b;
@@ -101,6 +98,9 @@ export function GeneralInfoSection({ title, tagline, mosaicBgImage, blocks }: Pr
 
   return (
     <>
+      {/* 
+      NOTE(adrian): Hide this section until copy gets updated.
+
       <MainContainer>
         <GatsbyImage
           image={mosaicBgImage}
@@ -119,7 +119,9 @@ export function GeneralInfoSection({ title, tagline, mosaicBgImage, blocks }: Pr
             <Tagline>{tagline}</Tagline>
           </MainTextWrapper>
         </SectionContentWrapper>
-      </MainContainer>
+      </MainContainer> 
+      */}
+
       <BottomContainer>
         <BottomContentWrapper>
           <BottomGrid>{renderGridItems()}</BottomGrid>

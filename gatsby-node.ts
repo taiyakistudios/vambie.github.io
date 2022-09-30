@@ -20,7 +20,7 @@ export async function createPages({ actions, graphql }: CreatePagesArgs) {
     const { slug } = node
 
     actions.createPage({
-      path: `project-types/${slug}`,
+      path: `${slug}`,
       component: path.resolve('./src/templates/projectTypePage.tsx'),
       context: {
         slug,
