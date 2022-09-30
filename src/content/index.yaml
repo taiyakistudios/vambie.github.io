@@ -1,46 +1,45 @@
 slug: vambie
 name: Vambie
-description: Join our community of creators and bring Vambies to life to show you are worthy of your own, unique Vambie.
+description: Vambies are for storytellers and content creators. Join my community and bring a Vambie to life with your story.
 
 hero:
-  title: Join the Vambie Preseason
+  title: I'm Dan, I made the Vambies
   tagline: |
-    "Behold… I have finally released the first Vambies into this world! Join our community of creators and bring Vambies to life in Snapchat, Animaze, VTubeStudio, Unreal Engine, or VRChat to show you are worthy of your own, unique Vambie." 
-
-    - Dan, Creator, Vambies
-  main_cta_title: Get your free Vambie on Discord
+    Vambies are for storytellers and content creators. Join my community and bring a Vambie to life with your story.
+  main_cta_title: Give me a Vambie on Discord
   main_cta_link: https://discord.gg/2mfZA69nAj
   secondary_cta_title: Don’t have Discord?
   secondary_cta_link: https://google.com
+  caption: Vambies work with Snapchat, Animaze, VTubeStudio, VRChat, and the Unreal Engine.
 
 general_info:
   title: More than 7500 vambies waiting to be brought to live and start their journey
   tagline: |
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem imperdiet pretium nisl, bibendum a at consectetur volutpat pretium.
   blocks:
+    - title: A Community Created Franchise
+      body: |
+        Join our creator community and grow the Vambie franchise. Retain full commercial rights to your Vambie content.
     - title: Launch on social media
       body: |
-        Launch a Tiktok, Youtube, Twitch, or Instagram page featuring Vambie content to earn your own, free, unique Vambie.
-    - title: Join the community
+        Launch a Tiktok, Youtube, Twitch, or Instagram page featuring Vambie content.
+    - title: Unlock a unique Vambie
       body: |
-        Join our creator community and grow the Vambie brand together.
-    - title: Start monetizing
-      body: |
-        Monetize your content royalty-free.
+        Create content regularly to earn an exclusive, free, unique Vambie avatar.
 
 storyboard:
   title: Roadmap
   items:
     - imageFileName: sb-image-1
-    - title: 10/03/2022 - Vambie Preseason
+    - title: October 2022 - Vambie Preseason
       body: |
-        A limited series of Vambies are available for free.
-    - title: 12/15/2022 - Vambie Launch
+        Content creators are invited to adopt a Vambie and help launch the Vambie franchise. The first community-driven animated show to launch on social networks is born.
+    - title: December 2022 - Vambie Launch
       body: |
         Thousands of Vambies are unleashed. Top preseason creators will get a free unique Vambie.
     - imageFileName: sb-image-2
     - imageFileName: sb-image-3
-    - title: 02/15/2023 - Governance Launch
+    - title: February 2023 - Governance Launch
       body: |
         Top creators will be able to vote on the commercial direction of the Vambie project and earn financial rewards for creating popular content.
 

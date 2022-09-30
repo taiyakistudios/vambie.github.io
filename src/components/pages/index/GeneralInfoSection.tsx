@@ -4,42 +4,47 @@ import React from 'react'
 
 import { SectionContainer, SectionContentWrapper } from '../../shared'
 
-/* Temporarily comment out for Vambie launch
-
-const MainContainer = styled(SectionContainer)`
+const VideoSectionContainer = styled(SectionContainer)`
   background-color: #212121;
   color: ${({ theme }) => theme.colors.common.white};
   position: relative;
 `
 
-const MainTextWrapper = styled(SectionTextWrapper)`
-  z-index: 3;
-  ${({ theme }) => theme.breakpoints.up('md')} {
-    width: 800px;
-  }
-`
-
-const MainImageOverlay = styled.div`
+const VideoSectionIFrame = styled.iframe`
   position: absolute;
-  width: 100%;
   height: 100%;
-  z-index: 2;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.3)
-  );
+  width: 100%;
 `
-*/
 
-const BottomContainer = styled(SectionContainer)`
+// NOTE(adrian): Can be re-added if necessary post launch
+//
+// const MainTextWrapper = styled(SectionTextWrapper)`
+//   z-index: 3;
+//   ${({ theme }) => theme.breakpoints.up('md')} {
+//     width: 800px;
+//   }
+// `
+
+// const MainImageOverlay = styled.div`
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 2;
+//   background: linear-gradient(
+//     to top,
+//     rgba(0, 0, 0, 0.9),
+//     rgba(0, 0, 0, 0.8),
+//     rgba(0, 0, 0, 0.3)
+//   );
+// `
+
+const TextSectionContainer = styled(SectionContainer)`
   background-color: #2b2b2b;
   color: ${({ theme }) => theme.colors.common.white};
   min-height: 0;
 `
 
-const BottomContentWrapper = styled(SectionContentWrapper)`
+const TextSectionContentWrapper = styled(SectionContentWrapper)`
   margin: ${({ theme }) => theme.spacing(5, 'auto')};
 
   ${({ theme }) => theme.breakpoints.up('md')} {
@@ -47,7 +52,7 @@ const BottomContentWrapper = styled(SectionContentWrapper)`
   }
 `
 
-const BottomGrid = styled.div`
+const TextSectionGrid = styled.div`
   display: grid;
   row-gap: ${({ theme }) => theme.spacing(5)};
 
@@ -59,14 +64,14 @@ const BottomGrid = styled.div`
   }
 `
 
-const BottomGirdItem = styled.div``
+const TextSectionGirdItem = styled.div``
 
-const BottomGridItemTitle = styled.h4`
+const TextSectionGridItemTitle = styled.h4`
   margin: 0;
   line-height: 1.5;
 `
 
-const BottomGridItemBody = styled.p`
+const TextSectionGridItemBody = styled.p`
   font-weight: 300;
   line-height: 1.6;
   margin-bottom: 0;
@@ -86,47 +91,34 @@ interface Props {
   }[]
 }
 
-export function GeneralInfoSection({ title, tagline, mosaicBgImage, blocks }: Props) {
+export function GeneralInfoSection({ blocks }: Props) {
   function renderGridItems() {
     return blocks.map((block, index) => (
-      <BottomGirdItem key={index}>
-        <BottomGridItemTitle>{block.title}</BottomGridItemTitle>
-        <BottomGridItemBody>{block.body}</BottomGridItemBody>
-      </BottomGirdItem>
+      <TextSectionGirdItem key={index}>
+        <TextSectionGridItemTitle>{block.title}</TextSectionGridItemTitle>
+        <TextSectionGridItemBody>{block.body}</TextSectionGridItemBody>
+      </TextSectionGirdItem>
     ))
   }
 
   return (
     <>
-      {/* 
-      NOTE(adrian): Hide this section until copy gets updated.
-
-      <MainContainer>
-        <GatsbyImage
-          image={mosaicBgImage}
-          alt="Background image"
-          style={{
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            zIndex: 1,
-          }}
-        />
-        <MainImageOverlay />
-        <SectionContentWrapper>
-          <MainTextWrapper>
-            <H2>{title}</H2>
-            <Tagline>{tagline}</Tagline>
-          </MainTextWrapper>
-        </SectionContentWrapper>
-      </MainContainer> 
-      */}
-
-      <BottomContainer>
-        <BottomContentWrapper>
-          <BottomGrid>{renderGridItems()}</BottomGrid>
-        </BottomContentWrapper>
-      </BottomContainer>
+      <TextSectionContainer>
+        <TextSectionContentWrapper>
+          <TextSectionGrid>{renderGridItems()}</TextSectionGrid>
+        </TextSectionContentWrapper>
+      </TextSectionContainer>
+      <VideoSectionContainer>
+        <VideoSectionIFrame
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/GlQ-VlEZrc0"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></VideoSectionIFrame>
+      </VideoSectionContainer>
     </>
   )
 }
