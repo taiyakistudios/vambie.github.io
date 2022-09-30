@@ -9,13 +9,10 @@ hero:
   main_cta_title: Give me a Vambie on Discord
   main_cta_link: https://discord.gg/2mfZA69nAj
   secondary_cta_title: Don’t have Discord?
-  secondary_cta_link: https://google.com
+  secondary_cta_link: https://app.taiyakistudios.com/universe/vambie/selectAvatarByEmail
   caption: Vambies work with Snapchat, Animaze, VTubeStudio, VRChat, and the Unreal Engine.
 
 general_info:
-  title: More than 7500 vambies waiting to be brought to live and start their journey
-  tagline: |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem imperdiet pretium nisl, bibendum a at consectetur volutpat pretium.
   blocks:
     - title: A Community Created Franchise
       body: |
@@ -42,48 +39,3 @@ storyboard:
     - title: February 2023 - Governance Launch
       body: |
         Top creators will be able to vote on the commercial direction of the Vambie project and earn financial rewards for creating popular content.
-
-project_types:
-  title: Get assets and start creating
-  tagline: |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit proin id blandit luctus molestie.
-  items:
-    - slug: snapchat-lens
-      title: Snapchat Lens
-      body: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod mattis auctor accumsan adipiscing. Aenean convallis.
-    - slug: unreal-engine
-      title: Unreal Engine
-      body: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod mattis auctor accumsan adipiscing. Aenean convallis.
-    - slug: vrm
-      title: VRM
-      body: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod mattis auctor accumsan adipiscing. Aenean convallis.
-    - slug: other
-      title: Other
-      body: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod mattis auctor accumsan adipiscing. Aenean convallis.
-
-roadmap:
-  title: Roadmap
-  items:
-    - timeframe: 01/10/2022
-      title: Project Launch
-      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
-      is_highlight: True
-    - timeframe: 01/10/2022
-      title: Snapchat Lens
-      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
-    - timeframe: 01/10/2022
-      title: VRM Tookit
-      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
-    - timeframe: 01/10/2022
-      title: NFT Pre-Order
-      description: Rutrum turpis mauris amet aliquam placerat eget tortor.
-
-discord:
-  title: Join our Discord Community
-  tagline: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit proin id blandit luctus molestie.
-  cta_title: Join the Taiyaki Discord
-  cta_link: https://discord.gg/2mfZA69nAj

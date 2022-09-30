@@ -179,10 +179,6 @@ export function HeroSection({
           logoOverride={
             <LogoContainer>
               <ProjectLogoText>{logoTitle}</ProjectLogoText>
-              {/* 
-                NOTE(adrian): Removed for Vambie launch 
-                <ByTaiyakiLogoText to="/">by Taiyaki Studios</ByTaiyakiLogoText>
-              */}
             </LogoContainer>
           }
         />

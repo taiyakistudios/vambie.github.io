@@ -27,7 +27,6 @@ interface Props {
 export function Footer({ isLight = true }: Props) {
   return (
     <Container isLight={isLight}>
-      {/* TODO(adrian): Link this to the website */}
       <Link href="https://taiyakistudios.com" target="_blank" rel="noopener noreferrer">
         © Taiyaki Studios
       </Link>
