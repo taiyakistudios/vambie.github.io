@@ -1,8 +1,7 @@
-import styled from '@emotion/styled'
 import { graphql, HeadFC } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import React, { useRef } from 'react'
-import { toast, ToastContainer } from 'react-toastify'
+import { toast } from 'react-toastify'
 
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -11,20 +10,11 @@ import {
   GeneralInfoSection,
   HeroSection,
   StoryboardSection,
+  ToastContainer,
 } from '../components/pages/index'
 import { DefaultHead, Footer, Layout } from '../components/shared'
 import content from '../content/index.yaml'
 import { useOnScreenOnce } from '../hooks'
-
-const StyledToastContainer = styled(ToastContainer)`
-  @media (min-width: 480px) {
-    min-width: 380px;
-  }
-
-  @media (min-width: 720px) {
-    min-width: 640px;
-  }
-`
 
 interface ImageSharpFile {
   childImageSharp: {
@@ -36,6 +26,7 @@ interface Props {
   data: {
     heroFrontFile: ImageSharpFile
     mosaicBgFile: ImageSharpFile
+    toastFrontFile: ImageSharpFile
     discordFrontFile: ImageSharpFile
     storyboardImageFiles: {
       edges: {
@@ -50,7 +41,14 @@ function IndexPage({ data }: Props) {
 
   useOnScreenOnce(storyboardSectionRef, (isVisible) => {
     if (!isVisible) return
-    toast((props) => <CtaToastContent {...props} />)
+    toast((props) => (
+      <CtaToastContent
+        {...props}
+        mainCtaLink={content.hero.main_cta_link}
+        secondaryCtaLink={content.hero.secondary_cta_link}
+        frontImage={data.toastFrontFile.childImageSharp.gatsbyImageData}
+      />
+    ))
   })
 
   const storyboardImageByName = data.storyboardImageFiles.edges
@@ -113,7 +111,12 @@ function IndexPage({ data }: Props) {
       </main>
       <Footer isLight={false} />
 
-      <StyledToastContainer limit={1} position="bottom-center" autoClose={false} />
+      <ToastContainer
+        limit={1}
+        position="bottom-center"
+        autoClose={false}
+        closeOnClick={false}
+      />
     </Layout>
   )
 }
@@ -131,6 +134,11 @@ export const query = graphql`
     heroFrontFile: file(relativePath: { eq: "hero-front.png" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, width: 480)
+      }
+    }
+    toastFrontFile: file(relativePath: { eq: "toast-front.png" }) {
+      childImageSharp {
+        gatsbyImageData(width: 100)
       }
     }
     mosaicBgFile: file(relativePath: { eq: "mosaic-bg.jpg" }) {
