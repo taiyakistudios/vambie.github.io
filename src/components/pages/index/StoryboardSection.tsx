@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
-import React from 'react'
+import React, { MutableRefObject } from 'react'
 
 import {
   H2,
@@ -74,17 +74,12 @@ const GridItemBody = styled.p`
 `
 
 interface Props {
+  visibilityRef: MutableRefObject<any>
   title: string
-  items: (
-    | {
-        title: string
-        body: string
-      }
-    | { image: IGatsbyImageData }
-  )[]
+  items: ({ title: string; body: string } | { image: IGatsbyImageData })[]
 }
 
-export function StoryboardSection({ title, items }: Props) {
+export function StoryboardSection({ title, items, visibilityRef }: Props) {
   function renderGridItems() {
     return items.map((item, index) => {
       if ('image' in item) {
@@ -114,7 +109,7 @@ export function StoryboardSection({ title, items }: Props) {
 
   return (
     <>
-      <MainContainer>
+      <MainContainer ref={visibilityRef}>
         <SectionContentWrapper>
           <TextWrapper>
             <H2>{title}</H2>

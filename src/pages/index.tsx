@@ -1,6 +1,6 @@
 import { graphql, HeadFC } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
-import React from 'react'
+import React, { useRef } from 'react'
 
 import {
   HeroSection,
@@ -9,6 +9,7 @@ import {
 } from '../components/pages/index'
 import { DefaultHead, Footer, Layout } from '../components/shared'
 import content from '../content/index.yaml'
+import useOnScreen from '../hooks/useOnScreen'
 
 interface ImageSharpFile {
   childImageSharp: {
@@ -30,6 +31,11 @@ interface Props {
 }
 
 function IndexPage({ data }: Props) {
+  const storyboardSectionRef = useRef()
+  const isStoryboardSectionVisible = useOnScreen(storyboardSectionRef)
+
+  console.log(isStoryboardSectionVisible)
+
   const storyboardImageByName = data.storyboardImageFiles.edges
     .filter(({ node }: any) => node.childImageSharp != null)
     .reduce<Record<string, IGatsbyImageData>>(
@@ -68,7 +74,11 @@ function IndexPage({ data }: Props) {
           mosaicBgImage={data.mosaicBgFile.childImageSharp.gatsbyImageData}
           blocks={content.general_info.blocks}
         />
-        <StoryboardSection title={content.storyboard.title} items={storyboardItems} />
+        <StoryboardSection
+          visibilityRef={storyboardSectionRef}
+          title={content.storyboard.title}
+          items={storyboardItems}
+        />
         {/* NOTE(adrian): These sections can be re-added once copy is ready
         <ProjectTypesSection
           title={content.project_types.title}
