@@ -1,15 +1,30 @@
+import styled from '@emotion/styled'
 import { graphql, HeadFC } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import React, { useRef } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
+
+import 'react-toastify/dist/ReactToastify.css'
 
 import {
+  CtaToastContent,
+  GeneralInfoSection,
   HeroSection,
   StoryboardSection,
-  GeneralInfoSection,
 } from '../components/pages/index'
 import { DefaultHead, Footer, Layout } from '../components/shared'
 import content from '../content/index.yaml'
-import useOnScreen from '../hooks/useOnScreen'
+import { useOnScreenOnce } from '../hooks'
+
+const StyledToastContainer = styled(ToastContainer)`
+  @media (min-width: 480px) {
+    min-width: 380px;
+  }
+
+  @media (min-width: 720px) {
+    min-width: 640px;
+  }
+`
 
 interface ImageSharpFile {
   childImageSharp: {
@@ -32,9 +47,11 @@ interface Props {
 
 function IndexPage({ data }: Props) {
   const storyboardSectionRef = useRef()
-  const isStoryboardSectionVisible = useOnScreen(storyboardSectionRef)
 
-  console.log(isStoryboardSectionVisible)
+  useOnScreenOnce(storyboardSectionRef, (isVisible) => {
+    if (!isVisible) return
+    toast((props) => <CtaToastContent {...props} />)
+  })
 
   const storyboardImageByName = data.storyboardImageFiles.edges
     .filter(({ node }: any) => node.childImageSharp != null)
@@ -95,6 +112,8 @@ function IndexPage({ data }: Props) {
         */}
       </main>
       <Footer isLight={false} />
+
+      <StyledToastContainer limit={1} position="bottom-center" autoClose={false} />
     </Layout>
   )
 }

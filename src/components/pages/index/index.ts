@@ -1,3 +1,4 @@
+export * from './CtaToastContent'
 export * from './DiscordSection'
 export * from './GeneralInfoSection'
 export * from './HeroSection'

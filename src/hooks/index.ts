@@ -1,2 +1,2 @@
 export * from './useSiteMetadata'
-export * from './useOnScreen'
+export * from './useOnScreenOnce'
