@@ -36,9 +36,9 @@ const plugins = [
       short_name: `Vambie`,
       start_url: `/`,
       background_color: `#fff`,
-      theme_color: `#000`,
+      theme_color: `#fff`,
       display: `standalone`,
-      icon: 'src/images/favicon.svg',
+      icon: 'src/images/favicon.png',
     },
   },
 ]
