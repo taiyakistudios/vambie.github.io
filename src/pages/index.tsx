@@ -138,7 +138,7 @@ export const query = graphql`
     }
     toastFrontFile: file(relativePath: { eq: "toast-front.png" }) {
       childImageSharp {
-        gatsbyImageData(width: 100)
+        gatsbyImageData(placeholder: TRACED_SVG, width: 100)
       }
     }
     mosaicBgFile: file(relativePath: { eq: "mosaic-bg.jpg" }) {
