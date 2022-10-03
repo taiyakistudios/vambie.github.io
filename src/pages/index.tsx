@@ -93,7 +93,7 @@ export default IndexPage
 
 export const Head: HeadFC<Props['data']> = function () {
   return (
-    <DefaultHead title="Vambie - Join the Preaseason" description={content.description} />
+    <DefaultHead title="Vambie - Join the Preseason" description={content.description} />
   )
 }
 
