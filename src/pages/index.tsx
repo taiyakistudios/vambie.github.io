@@ -1,14 +1,20 @@
 import { graphql, HeadFC } from 'gatsby'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
-import React from 'react'
+import React, { useRef } from 'react'
+import { toast } from 'react-toastify'
+
+import 'react-toastify/dist/ReactToastify.css'
 
 import {
+  CtaToastContent,
+  GeneralInfoSection,
   HeroSection,
   StoryboardSection,
-  GeneralInfoSection,
+  ToastContainer,
 } from '../components/pages/index'
 import { DefaultHead, Footer, Layout } from '../components/shared'
 import content from '../content/index.yaml'
+import { useOnScreenOnce } from '../hooks'
 
 interface ImageSharpFile {
   childImageSharp: {
@@ -20,6 +26,7 @@ interface Props {
   data: {
     heroFrontFile: ImageSharpFile
     mosaicBgFile: ImageSharpFile
+    toastFrontFile: ImageSharpFile
     discordFrontFile: ImageSharpFile
     storyboardImageFiles: {
       edges: {
@@ -30,6 +37,20 @@ interface Props {
 }
 
 function IndexPage({ data }: Props) {
+  const storyboardSectionRef = useRef()
+
+  useOnScreenOnce(storyboardSectionRef, (isVisible) => {
+    if (!isVisible) return
+    toast((props) => (
+      <CtaToastContent
+        {...props}
+        mainCtaLink={content.hero.main_cta_link}
+        secondaryCtaLink={content.hero.secondary_cta_link}
+        frontImage={data.toastFrontFile.childImageSharp.gatsbyImageData}
+      />
+    ))
+  })
+
   const storyboardImageByName = data.storyboardImageFiles.edges
     .filter(({ node }: any) => node.childImageSharp != null)
     .reduce<Record<string, IGatsbyImageData>>(
@@ -68,7 +89,11 @@ function IndexPage({ data }: Props) {
           mosaicBgImage={data.mosaicBgFile.childImageSharp.gatsbyImageData}
           blocks={content.general_info.blocks}
         />
-        <StoryboardSection title={content.storyboard.title} items={storyboardItems} />
+        <StoryboardSection
+          visibilityRef={storyboardSectionRef}
+          title={content.storyboard.title}
+          items={storyboardItems}
+        />
         {/* NOTE(adrian): These sections can be re-added once copy is ready
         <ProjectTypesSection
           title={content.project_types.title}
@@ -85,6 +110,13 @@ function IndexPage({ data }: Props) {
         */}
       </main>
       <Footer isLight={false} />
+
+      <ToastContainer
+        limit={1}
+        position="bottom-center"
+        autoClose={false}
+        closeOnClick={false}
+      />
     </Layout>
   )
 }
@@ -102,6 +134,11 @@ export const query = graphql`
     heroFrontFile: file(relativePath: { eq: "hero-front.png" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, width: 480)
+      }
+    }
+    toastFrontFile: file(relativePath: { eq: "toast-front.png" }) {
+      childImageSharp {
+        gatsbyImageData(width: 100)
       }
     }
     mosaicBgFile: file(relativePath: { eq: "mosaic-bg.jpg" }) {
