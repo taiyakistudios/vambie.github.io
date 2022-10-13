@@ -28,4 +28,11 @@ export async function createPages({ actions, graphql }: CreatePagesArgs) {
       },
     })
   }
+
+  // Hanlde redirects
+
+  actions.createRedirect({
+    fromPath: '/getavatar',
+    toPath: 'https://app.taiyakistudios.com/universe/vambie/selectAvatarByEmail',
+  })
 }
