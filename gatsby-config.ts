@@ -41,7 +41,6 @@ const plugins = [
       icon: 'src/images/favicon.png',
     },
   },
-  `gatsby-plugin-meta-redirect`,
 ]
 
 const config: GatsbyConfig = {

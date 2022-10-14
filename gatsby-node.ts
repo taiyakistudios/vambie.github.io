@@ -34,5 +34,7 @@ export async function createPages({ actions, graphql }: CreatePagesArgs) {
   actions.createRedirect({
     fromPath: '/getavatar',
     toPath: 'https://app.taiyakistudios.com/universe/vambie/selectAvatarByEmail',
+    force: true,
+    redirectInBrowser: true,
   })
 }
