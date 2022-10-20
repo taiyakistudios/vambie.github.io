@@ -112,7 +112,7 @@ export function GeneralInfoSection({ blocks }: Props) {
         <VideoSectionIFrame
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/GlQ-VlEZrc0?modestbranding=1&rel=0"
+          src="https://www.youtube.com/embed/Md60zHgJyOU?modestbranding=1&rel=0"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
