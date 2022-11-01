@@ -9,8 +9,8 @@ hero:
   main_cta_title: Give me a Vambie on Discord
   main_cta_link: https://discord.gg/ZhMGDB5tUV
   secondary_cta_title: Don’t have Discord?
-  secondary_cta_link: https://app.taiyakistudios.com/universe/vambie/selectAvatarByEmail
-  caption: Vambies work with Snapchat, Animaze, VTubeStudio, VRChat, and the Unreal Engine.
+  secondary_cta_link: https://app.taiyakistudios.com/universe/vambie/selectAvatar
+  caption: Vambies work with Snapchat, Animaze, VTubeStudio, Live2D, VRChat, and the Unreal Engine.
 
 general_info:
   blocks:

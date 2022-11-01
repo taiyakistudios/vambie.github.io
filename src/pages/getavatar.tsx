@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function GetAvatarPage() {
-  const redirectUrl = 'https://app.taiyakistudios.com/universe/vambie/selectAvatarByEmail'
+  const redirectUrl = 'https://app.taiyakistudios.com/universe/vambie/selectAvatar'
   return (
     <>
       <meta charSet="utf-8" />

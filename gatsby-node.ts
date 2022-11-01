@@ -33,7 +33,7 @@ export async function createPages({ actions, graphql }: CreatePagesArgs) {
 
   actions.createRedirect({
     fromPath: '/getavatar',
-    toPath: 'https://app.taiyakistudios.com/universe/vambie/selectAvatarByEmail',
+    toPath: 'https://app.taiyakistudios.com/universe/vambie/selectAvatar',
     force: true,
     redirectInBrowser: true,
   })
